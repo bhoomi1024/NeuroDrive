@@ -1,21 +1,24 @@
-import React from 'react'
-import Nav from '../../components/HomePageCompo/Nav'
-import Footer from '../../components/HomePageCompo/Footer'
+import React from 'react';
+import Nav from '../../components/HomePageCompo/Nav';
+import Scene from '../../game/Scene';
+import { Physics } from "@react-three/cannon";
+import "../../assets/global.css";
+import { Canvas } from "@react-three/fiber";
 
-const Game = () => {
+function Game() {
   return (
     <>
-    <Nav/>
-    <iframe 
-  className="absolute top-[88px] left-0 w-full h-[calc(100vh-88px)]"  // This ensures iframe height is the remaining space after the navbar
-  src="http://localhost:5174"
-  title="Fuel Efficiency Tracking"
-  frameBorder="0"
-  scrolling="yes" // Allow scrolling if content exceeds height
-/>
-<Footer/>
+      <Nav />
+      <div style={{ margin: 0, width: '100%', height: '100vh', overflow: 'auto' }}>
+        <Canvas>
+          <Physics broadphase="SAP" gravity={[0, -2.1, 0]}>
+            <Scene />
+          </Physics>
+        </Canvas>
+      </div>
     </>
-  )
+  );
 }
 
-export default Game
+export default Game;
+
