@@ -1,0 +1,150 @@
+/* ImageUploadForm.css */
+.container {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.upload-card, .diy-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diy-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.card-header, .diy-header {
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+}
+
+.card-header h2, .diy-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  
+}
+
+.card-content, .diy-content {
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.file-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.image-preview {
+  margin-top: 16px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.submit-button.loading {
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.diy-line {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.header-line {
+  font-weight: 600;
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.step-line {
+  padding-left: 16px;
+  color: #333;
+}
+
+/* Video section styles */
+.video-container {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-container h3 {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  color: #2e7d32;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .upload-card, .diy-card, .video-container {
+    max-width: 100%;
+  }
+  
+  .diy-container {
+    max-width: 100%;
+  }
+}
