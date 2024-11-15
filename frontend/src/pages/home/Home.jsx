@@ -13,6 +13,7 @@ import dpfMonitoringImage from "../../assets/carAIDIY.jpg";
 import dfMonitoringImage from "../../assets/mobilebased.png";
 import proprietaryHardwareImage from "../../assets/hard.jpg";
 import vehicleMonitoringImag from "../../assets/integrated.jpg";
+import Chatbot from "../../components/HomePageCompo/ChatBot";
 
 const Home = () => {
   useEffect(() => {
@@ -58,6 +59,8 @@ const Home = () => {
               </p>
             </div>
           </section>
+
+         <Chatbot/>
 
           {/* Key Benefits Section */}
           <section className="bg-lime-100 p-12 rounded-lg mb-16" data-aos="fade-up">

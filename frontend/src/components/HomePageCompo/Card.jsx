@@ -24,6 +24,7 @@ const Card = (props) => {
         <span className="text-base font-medium ">{props.service}</span>
         <span className="text-base text-slate-600">{props.address}</span>
       </div>
+      
     </div>
   );
 };

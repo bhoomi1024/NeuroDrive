@@ -40,11 +40,7 @@ This project implements AI-driven predictive maintenance for vehicles, leveragin
 
 ## Contributors
 
-- Dharshan A
-- Pravin R F
-- Rishikaandh Devadoss
-- Abinayaa M K
+
 
 ## Contact
 
-For questions or inquiries, please contact dharshanathi21@gmail.com.

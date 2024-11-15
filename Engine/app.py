@@ -127,10 +127,7 @@ def prediction_page():
             else:
                 st.warning(f"⚠️Warning! Please investigate further. Confidence level: {1.0 - confidence:.2%}")
 
-    with col2:
-        # Reset button
-        if st.button("Reset Values", use_container_width=True):
-            st.experimental_rerun()
+    
 
 def save_prediction(values, prediction, confidence):
     """Save prediction data to session state and CSV file"""
@@ -258,51 +255,82 @@ def dashboard_page():
         )
         st.altair_chart(temp_chart, use_container_width=True)
 
-    # Create two columns for the second row of charts
-    col1, col2 = st.columns(2)
+   # Create four separate sections for graphs
+    st.subheader("Engine Condition Distribution")
+    prediction_counts = pd.DataFrame({
+        'Condition': ['Normal', 'Warning'],
+        'Count': [normal_count, warning_count]
+    })
+    condition_chart = create_altair_chart(
+        prediction_counts,
+        'Condition',
+        'Count',
+        'Engine Conditions Distribution'
+    )
+    st.altair_chart(condition_chart, use_container_width=True)
 
-    with col1:
-        # Pressure Comparison
-        pressure_data = df.groupby('hour')[['Lub oil pressure', 'Fuel pressure', 'Coolant pressure']].mean().reset_index()
-        pressure_data_melted = pd.melt(
-            pressure_data,
-            id_vars=['hour'],
-            value_vars=['Lub oil pressure', 'Fuel pressure', 'Coolant pressure'],
-            var_name='Pressure Type',
-            value_name='Pressure'
-        )
-        pressure_chart = alt.Chart(pressure_data_melted).mark_line().encode(
-            x='hour:O',
-            y='Pressure:Q',
-            color='Pressure Type:N',
-            tooltip=['hour', 'Pressure', 'Pressure Type']
-        ).properties(
-            title='Pressure Trends',
-            width=300,
-            height=200
-        )
-        st.altair_chart(pressure_chart, use_container_width=True)
+    st.subheader("Temperature Trends")
+    df['hour'] = pd.to_datetime(df['timestamp']).dt.hour
+    temp_data = df.groupby('hour')[['lub oil temp', 'Coolant temp']].mean().reset_index()
+    temp_data_melted = pd.melt(
+        temp_data,
+        id_vars=['hour'],
+        value_vars=['lub oil temp', 'Coolant temp'],
+        var_name='Temperature Type',
+        value_name='Temperature'
+    )
+    temp_chart = alt.Chart(temp_data_melted).mark_line().encode(
+        x='hour:O',
+        y='Temperature:Q',
+        color='Temperature Type:N',
+        tooltip=['hour', 'Temperature', 'Temperature Type']
+    ).properties(
+        title='Temperature Trends Over Time',
+        width=600,
+        height=400
+    )
+    st.altair_chart(temp_chart, use_container_width=True)
 
-    with col2:
-        # Engine RPM over time
-        rpm_data = df.groupby('hour')[['Engine rpm']].mean().reset_index()
-        rpm_chart = alt.Chart(rpm_data).mark_line().encode(
-            x='hour:O',
-            y='Engine rpm:Q',
-            tooltip=['hour', 'Engine rpm']
-        ).properties(
-            title='Engine RPM Trend',
-            width=300,
-            height=200
-        )
-        st.altair_chart(rpm_chart, use_container_width=True)
+    st.subheader("Pressure Trends")
+    pressure_data = df.groupby('hour')[['Lub oil pressure', 'Fuel pressure', 'Coolant pressure']].mean().reset_index()
+    pressure_data_melted = pd.melt(
+        pressure_data,
+        id_vars=['hour'],
+        value_vars=['Lub oil pressure', 'Fuel pressure', 'Coolant pressure'],
+        var_name='Pressure Type',
+        value_name='Pressure'
+    )
+    pressure_chart = alt.Chart(pressure_data_melted).mark_line().encode(
+        x='hour:O',
+        y='Pressure:Q',
+        color='Pressure Type:N',
+        tooltip=['hour', 'Pressure', 'Pressure Type']
+    ).properties(
+        title='Pressure Trends Over Time',
+        width=600,
+        height=400
+    )
+    st.altair_chart(pressure_chart, use_container_width=True)
+
+    st.subheader("Engine RPM Trend")
+    rpm_data = df.groupby('hour')[['Engine rpm']].mean().reset_index()
+    rpm_chart = alt.Chart(rpm_data).mark_line().encode(
+        x='hour:O',
+        y='Engine rpm:Q',
+        tooltip=['hour', 'Engine rpm']
+    ).properties(
+        title='Engine RPM Over Time',
+        width=600,
+        height=400
+    )
+    st.altair_chart(rpm_chart, use_container_width=True)
 
     # Recent Predictions Table
     st.subheader("Recent Predictions")
     recent_cols = ['timestamp', 'prediction', 'Engine rpm', 'lub oil temp', 'Coolant temp']
     recent_predictions = df[recent_cols].tail(5).sort_values('timestamp', ascending=False)
     st.dataframe(recent_predictions, height=200)
-    
+
     
      # Display Prediction Result on Dashboard (last prediction)
     st.subheader("Latest Prediction")
@@ -344,19 +372,19 @@ def dashboard_page():
 
     ### Possible Causes of Anomalous Readings 🛑
     Several factors could be contributing to the warning status. Common causes include:
-    - **Fuel System Issues**: Clogged fuel injectors, fuel pump failure, or poor fuel quality can disrupt the engine's fuel delivery, leading to irregular performance. ⛔
-    - **Cooling System Malfunction**: An overheating engine due to low coolant levels, a malfunctioning radiator, or a faulty thermostat can cause warning signals. This can lead to engine parts getting damaged if not addressed quickly. 🌡️
-    - **Air Intake Blockages**: A clogged air filter or a malfunctioning mass airflow sensor could lead to insufficient air supply, affecting engine performance. 🏭
-    - **Oil and Lubrication Problems**: Low or contaminated engine oil, or malfunctioning oil pumps, can result in poor lubrication and increase friction between engine components. 🛢️
-    - **Ignition System Failure**: Worn-out spark plugs, bad ignition coils, or issues with the timing system can cause engine misfires or reduced power. ⚡
+    - **Fuel System Issues**: Clogged fuel injectors, fuel pump failure, or poor fuel quality can disrupt the engine's fuel delivery, leading to irregular performance. 
+    - **Cooling System Malfunction**: An overheating engine due to low coolant levels, a malfunctioning radiator, or a faulty thermostat can cause warning signals. This can lead to engine parts getting damaged if not addressed quickly. 
+    - **Air Intake Blockages**: A clogged air filter or a malfunctioning mass airflow sensor could lead to insufficient air supply, affecting engine performance. 
+    - **Oil and Lubrication Problems**: Low or contaminated engine oil, or malfunctioning oil pumps, can result in poor lubrication and increase friction between engine components. 
+    - **Ignition System Failure**: Worn-out spark plugs, bad ignition coils, or issues with the timing system can cause engine misfires or reduced power. 
 
     ### Symptoms of Engine Anomalies 🔍
     Depending on the underlying cause of the warning, the symptoms could manifest as:
-    - **Decreased Engine Power**: A noticeable reduction in engine responsiveness, sluggish acceleration, or inability to reach higher speeds. 🚶‍♂️
-    - **Unusual Engine Noises**: Grinding, knocking, or sputtering sounds can indicate issues with internal components, such as pistons, valves, or the fuel system. 🔊
-    - **Increased Exhaust Emissions**: Higher-than-normal exhaust emissions, such as thick smoke or strong fuel smells, suggest incomplete combustion or issues with the fuel system. 🌫️
-    - **Overheating**: The engine temperature gauge may spike, indicating that the engine is running too hot, which could be due to coolant issues or a failing cooling system. 🔥
-    - **Check Engine Light**: A steady or flashing check engine light may indicate misfires, sensor issues, or other significant performance problems. 💡
+    - **Decreased Engine Power**: A noticeable reduction in engine responsiveness, sluggish acceleration, or inability to reach higher speeds. 
+    - **Unusual Engine Noises**: Grinding, knocking, or sputtering sounds can indicate issues with internal components, such as pistons, valves, or the fuel system. 
+    - **Increased Exhaust Emissions**: Higher-than-normal exhaust emissions, such as thick smoke or strong fuel smells, suggest incomplete combustion or issues with the fuel system. 
+    - **Overheating**: The engine temperature gauge may spike, indicating that the engine is running too hot, which could be due to coolant issues or a failing cooling system. 
+    - **Check Engine Light**: A steady or flashing check engine light may indicate misfires, sensor issues, or other significant performance problems. 
 
     ### Recommended Repair Strategies ⚙️
     If your engine is exhibiting any of the above symptoms, here are the steps you should take to address the underlying cause:

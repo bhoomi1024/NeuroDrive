@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Nav from '../../components/HomePageCompo/Nav';
 import Footer from '../../components/HomePageCompo/Footer';
+import Chatbot from '../../components/HomePageCompo/ChatBot';
 function ContactUS() {
   const [formData, setFormData] = useState({
     name: '',
@@ -29,7 +30,7 @@ function ContactUS() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-8">Contact Us</h2>
           <p className="text-lg text-gray-600 mb-6">We'd love to hear from you. Fill out the form below to get in touch with us.</p>
-
+<Chatbot/>
           <form
             onSubmit={handleSubmit}
             className="bg-white p-8 rounded-xl shadow-xl max-w-lg mx-auto space-y-6"

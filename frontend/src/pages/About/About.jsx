@@ -3,6 +3,7 @@ import Nav from '../../components/HomePageCompo/Nav';
 import Footer from '../../components/HomePageCompo/Footer';
 import architectureImage from '../../assets/architecture.jpg';
 import aiTechnologyImage from '../../assets/about.jpg';
+import Chatbot from '../../components/HomePageCompo/ChatBot';
 
 const About = () => {
   return (
@@ -29,7 +30,7 @@ const About = () => {
             NeuroDrive isn't just a maintenance tool—it's an intelligent companion for your vehicle. Using continuous monitoring, AI-powered insights, and predictive analytics, we identify potential issues before they become critical, saving you from unexpected breakdowns and costly repairs.
           </p>
         </div>
-
+<Chatbot/>
         {/* How NeuroDrive Works Section with Architecture Image Below */}
         <div className="max-w-4xl text-left mb-16 space-y-12">
           <h2 className="text-4xl font-semibold text-blue-600 mb-4">How NeuroDrive Works</h2>

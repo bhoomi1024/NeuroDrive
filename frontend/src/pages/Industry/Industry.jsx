@@ -12,6 +12,7 @@ import MarineEngines from '../../assets/MarineEngines.jpg';
 import Gensets from '../../assets/Gensets.jpeg';
 import WasteManagement from '../../assets/Waste.jpg';
 
+
 const industries = [
   {
     name: "Regular Car Users",
