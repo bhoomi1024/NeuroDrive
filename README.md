@@ -43,6 +43,7 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 - **Innovative Tech Integration**: AR/VR tools and mobile apps elevate the user experience.  
 
 ---
+## 💻⚙️ NeuroDrive Architechture
 ![NeuroDrive Architechture](frontend/src/assets/architech.png)
 
 ---
@@ -110,8 +111,20 @@ Optimize fleet management, routes, and timely deliveries, ensuring supply chain 
 
 ---
 
-## 🚀 Getting Started
+## 🫱🏻‍🫲🏼 Contributors
 
-### Clone the Repository
-```bash
-git clone <repository_url>
+- Bhoomi
+- Geetanjali
+- Sonal
+- Gomtesh
+
+---
+
+## 📩 Contact
+
+For questions or inquiries, please contact vbhoomi10242gmail.com.
+
+---
+---
+
+Join us in **Empowering smarter, safer, and more efficient driving with AI-driven vehicle insights.**!
