@@ -14,6 +14,7 @@ import dfMonitoringImage from "../../assets/mobilebased.png";
 import proprietaryHardwareImage from "../../assets/hard.jpg";
 import vehicleMonitoringImag from "../../assets/integrated.jpg";
 import Chatbot from "../../components/HomePageCompo/ChatBot";
+import WeatherImage from "../../assets/weather.jpg"
 
 const Home = () => {
   useEffect(() => {
@@ -120,6 +121,11 @@ const Home = () => {
           title: "Real time solution of unplanned BreakDown",
           description: "AI provide Real-time suggestions , DIY videos and instructions and minimal downTime",
           img: dpfMonitoringImage,
+        },
+        {
+          "title": "Route Specific Weather Prediction",
+          "description": "Real-time weather updates, alerts, and trends tailored for your vehicle routes.",
+          "img": WeatherImage,
         },
         {
           title: "Mobile and Web based Solutions",
