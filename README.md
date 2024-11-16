@@ -43,7 +43,7 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 - **Innovative Tech Integration**: AR/VR tools and mobile apps elevate the user experience.  
 
 ---
-![NeuroDrive Demo](frontend/src/assets/cararchi.jpg)
+![NeuroDrive Architecture](frontend/src/assets/arc.png)
 
 ---
 
