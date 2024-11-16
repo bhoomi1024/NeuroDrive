@@ -93,7 +93,7 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 ## 🫱🏻‍🫲🏼 Contributors
 
 - Bhoomi
-- Geetanjali
+- Geethanjali
 - Sonal
 - Gomtesh
 

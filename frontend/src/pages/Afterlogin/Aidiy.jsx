@@ -41,6 +41,11 @@ const Aidiy = () => {
                   DriveShield
                 </li>
               </Link>
+              <Link to="/Weather">
+            <li className="hover:cursor-pointer hover:scale-[0.975]">
+              Weather
+            </li>
+          </Link>
               <Link to="/">
                 <li className="hover:cursor-pointer hover:scale-[0.975]">
                   Logout

@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 
-function Battery() {
-  return (
-    <>
-    {/* Navbar */}
-    <div className="h-22 w-full fixed z-[50] bg-white top-0">
+const weather = () => {
+    return (
+        <>
+          {/* Navbar */}
+          <div className="h-22 w-full fixed z-[50] bg-white top-0">
             <div className="p-5 flex justify-center shadow-md">
               <nav className="flex justify-between w-full">
                 <div className="flex justify-center items-center ml-12">
@@ -54,16 +54,17 @@ function Battery() {
               </nav>
             </div>
           </div>
-    <iframe 
-className="absolute top-[88px] left-0 w-full h-[calc(100vh-88px)]"  // This ensures iframe height is the remaining space after the navbar
-src="http://localhost:8502"
-title="Fuel Efficiency Tracking"
-frameBorder="0"
-scrolling="yes" // Allow scrolling if content exceeds height
-/>
+    
+          <iframe 
+      className="absolute top-[88px] left-0 w-full h-[calc(100vh-88px)]"  // This ensures iframe height is the remaining space after the navbar
+      src="https://the-weather-forecasting.netlify.app/"
+      title="Fuel Efficiency Tracking"
+      frameBorder="0"
+      scrolling="yes" // Allow scrolling if content exceeds height
+    />
+    
+        </>
+      );
+    }
 
-  </>
-   );
-  }
-
-export default Battery
+export default weather

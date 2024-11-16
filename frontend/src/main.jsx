@@ -25,6 +25,7 @@ import Aidiy from "./pages/Afterlogin/Aidiy.jsx";
 import OgMain from "../../frontend/src/components/diy/OgMain.jsx"
 import About from "./pages/About/About.jsx";
 import Industry from "./pages/Industry/Industry.jsx";
+import Weather from "./pages/Afterlogin/Weather.jsx";
 
 
 const router = createBrowserRouter(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
       <Route path="/UserResetPassword/:token" element={<UserResetPassword />} />
       <Route path="Engine" element={<Engine />} />
       <Route path="Battery" element={<Battery />} /> 
+      <Route path="Weather" element={<Weather/>}/>
       <Route path="Fule" element={<Fule />} />       
       <Route path="Aidiy" element={<Aidiy />} />
       <Route path="Home" element={<Home />} />      
@@ -45,6 +47,7 @@ const router = createBrowserRouter(
       <Route path="About" element={<About/>}/>
       <Route path="Industry" element={<Industry/>}/>
       <Route path="Game" element={<Game/>}/>
+      
     </Route>
   )
 );
