@@ -62,6 +62,42 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 
 ---
 
+## 🚗 NeuroDrive Applications Across Industries
+
+### Regular Car Users
+Drive with confidence every day. NeuroDrive offers peace of mind by providing real-time insights into vehicle health, helping drivers stay ahead of maintenance needs.
+
+### Trucking
+Keep your fleet on the road, not in the shop. NeuroDrive ensures trucking fleets stay operational, maximizing uptime and reducing unscheduled repairs.
+
+### Construction
+Supporting your project timelines, no matter how tight. NeuroDrive helps keep machinery in peak condition with proactive monitoring.
+
+### Mining
+Designed for rugged environments. NeuroDrive's monitoring solutions detect early signs of wear and tear in heavy-duty mining equipment.
+
+### Farming
+Empowering farmers to maximize productivity. NeuroDrive provides insights into farming equipment health, helping prevent costly delays.
+
+### Oil & Gas
+Ensuring equipment is always ready and reliable. NeuroDrive continuously monitors essential oil and gas equipment, reducing the risk of malfunctions.
+
+### Transit and Coach
+Delivering riders safely from point A to point B. NeuroDrive provides transit operators with real-time health insights, ensuring safe, reliable travel.
+
+### Marine Engines
+Optimizing engine efficiency at sea. NeuroDrive helps marine operators maximize fuel efficiency and engine reliability, reducing maintenance costs.
+
+### Gensets
+Reliable power whenever it’s needed. NeuroDrive’s analytics keep a close watch on genset performance, ensuring dependable power.
+
+### Waste Management
+Improving fleet efficiency for a cleaner tomorrow. NeuroDrive reduces fleet downtime and improves operational efficiency for waste management vehicles.
+
+### Logistics
+Enhancing supply chain efficiency. NeuroDrive helps logistics companies monitor their fleets, optimizing routes and preventing breakdowns, ensuring timely deliveries.
+
+
 ## 🔮 Future Scope
 - **IoT Expansion**: Integration with advanced sensors for deeper data insights.
 - **Augmented Reality (AR) Diagnostics**: Immersive tools for vehicle maintenance.
