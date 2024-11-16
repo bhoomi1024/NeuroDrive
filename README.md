@@ -45,9 +45,14 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 ---
 ## 💻⚙️ NeuroDrive Architechture
 ![NeuroDrive Architechture](frontend/src/assets/architech.png)
-
 ---
-
+## WebSite Demo
+![NeuroDrive Architechture](frontend/src/assets/home.png)
+![NeuroDrive Architechture](frontend/src/assets/ss.png)
+---
+## 💻⚙️ Website Architechture
+![NeuroDrive Architechture](frontend/src/assets/website.jpeg)
+---
 ## 🛠️ Technology Highlights
 - **AI & ML Models**: Gradient Boosting Machine (GBM) and Random Forest for accurate predictions.
 - **IoT Sensors**: Real-time data collection from vehicle sensors.
