@@ -43,6 +43,9 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 - **Innovative Tech Integration**: AR/VR tools and mobile apps elevate the user experience.  
 
 ---
+![NeuroDrive Demo](frontend/src/assets/cararchi.jpg)
+
+---
 
 ## 🛠️ Technology Highlights
 - **AI & ML Models**: Gradient Boosting Machine (GBM) and Random Forest for accurate predictions.
@@ -96,6 +99,8 @@ Improve fleet efficiency, reduce downtime, and streamline operations for waste m
 
 ### Logistics
 Optimize fleet management, routes, and timely deliveries, ensuring supply chain efficiency.
+
+---
 
 ## 🔮 Future Scope
 - **IoT Expansion**: Integration with advanced sensors for deeper data insights.
