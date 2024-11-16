@@ -125,6 +125,4 @@ Optimize fleet management, routes, and timely deliveries, ensuring supply chain 
 For questions or inquiries, please contact vbhoomi10242gmail.com.
 
 ---
----
-
 Join us in **Empowering smarter, safer, and more efficient driving with AI-driven vehicle insights.**!
