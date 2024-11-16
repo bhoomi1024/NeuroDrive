@@ -48,6 +48,7 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 ---
 ## WebSite Demo
 ![NeuroDrive Architechture](frontend/src/assets/home.png)
+---
 ![NeuroDrive Architechture](frontend/src/assets/ss.png)
 ---
 ## 💻⚙️ Website Architechture
