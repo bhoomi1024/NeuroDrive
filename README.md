@@ -66,40 +66,19 @@ NeuroDrive is an intelligent vehicle management platform that leverages Artifici
 
 ---
 
-## 🚗 NeuroDrive Applications Across Industries
+## 🚗 NeuroDrive Applications
 
-### Regular Car Users
-Real-time vehicle health insights to stay ahead of maintenance and drive with confidence.
-
-### Trucking
-Maximize fleet uptime and reduce unscheduled repairs with proactive monitoring.
-
-### Construction
-Keep machinery in peak condition, ensuring project timelines are met.
-
-### Mining
-Detect early wear and tear in heavy-duty equipment, preventing costly breakdowns.
-
-### Farming
-Monitor farming equipment health to avoid delays and boost productivity.
-
-### Oil & Gas
-Continuous monitoring of equipment to reduce malfunctions and ensure reliability.
-
-### Transit & Coach
-Provide safe, reliable travel with real-time health insights for transit operators.
-
-### Marine Engines
-Maximize fuel efficiency and engine reliability, reducing maintenance costs at sea.
-
-### Gensets
-Ensure reliable power with continuous performance monitoring for gensets.
-
-### Waste Management
-Improve fleet efficiency, reduce downtime, and streamline operations for waste management.
-
-### Logistics
-Optimize fleet management, routes, and timely deliveries, ensuring supply chain efficiency.
+- **Regular Car Users**: Stay ahead of maintenance with real-time vehicle health insights.  
+- **Trucking**: Maximize uptime and reduce unscheduled repairs with proactive monitoring.  
+- **Construction**: Keep machinery in peak condition to meet project timelines.  
+- **Mining**: Detect early wear in heavy-duty equipment to prevent breakdowns.  
+- **Farming**: Monitor equipment health to avoid delays and boost productivity.  
+- **Oil & Gas**: Continuous equipment monitoring to ensure reliability and reduce malfunctions.  
+- **Transit & Coach**: Provide safe, reliable travel with real-time health insights for operators.  
+- **Marine Engines**: Maximize fuel efficiency and reliability, reducing sea maintenance costs.  
+- **Gensets**: Ensure reliable power with continuous genset performance monitoring.  
+- **Waste Management**: Improve fleet efficiency, reduce downtime, and streamline operations.  
+- **Logistics**: Optimize fleet management and route planning for timely deliveries.
 
 ---
 
