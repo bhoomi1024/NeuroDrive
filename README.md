@@ -110,7 +110,7 @@ https://drive.google.com/file/d/1G0lETOLi7O_Z5HQ5Vn9uaPLQPembaFvi/view?usp=drive
 
 ## 📩 Contact
 
-For questions or inquiries, please contact vbhoomi10242gmail.com.
+For questions or inquiries, please contact vermabhoomi10248932@gmail.com
 
 ---
 Join us in **Empowering smarter, safer, and more efficient driving with AI-driven vehicle insights.**!
